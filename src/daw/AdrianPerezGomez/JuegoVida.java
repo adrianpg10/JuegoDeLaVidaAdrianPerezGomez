@@ -41,8 +41,8 @@ public class JuegoVida extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         labelNumCel = new javax.swing.JTextField();
         btnValidar = new javax.swing.JButton();
-        labelSalida = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
+        celulasAleatorias = new javax.swing.JButton();
         Izq = new javax.swing.JPanel();
         Der = new javax.swing.JPanel();
 
@@ -52,7 +52,7 @@ public class JuegoVida extends javax.swing.JFrame {
         Top.setBackground(new java.awt.Color(194, 210, 214));
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel1.setText("Introduce el numero de células");
+        jLabel1.setText("Introduce el número de células");
 
         labelNumCel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,12 +67,17 @@ public class JuegoVida extends javax.swing.JFrame {
             }
         });
 
-        labelSalida.setText("Ejemplo");
-
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
+            }
+        });
+
+        celulasAleatorias.setText("Generar celulas aleatorias");
+        celulasAleatorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                celulasAleatoriasActionPerformed(evt);
             }
         });
 
@@ -82,34 +87,35 @@ public class JuegoVida extends javax.swing.JFrame {
             TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TopLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TopLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(labelNumCel, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnValidar))
-                    .addComponent(labelSalida))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 191, Short.MAX_VALUE)
+                    .addGroup(TopLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(celulasAleatorias)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
                 .addComponent(btnSalir)
                 .addContainerGap())
         );
         TopLayout.setVerticalGroup(
             TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TopLayout.createSequentialGroup()
-                .addGroup(TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(TopLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalir))
-                    .addGroup(TopLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(labelNumCel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnValidar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(labelSalida)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSalir)
+                    .addComponent(celulasAleatorias))
                 .addContainerGap())
+            .addGroup(TopLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(TopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(labelNumCel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnValidar))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         Izq.setBackground(new java.awt.Color(235, 189, 42));
@@ -161,7 +167,7 @@ public class JuegoVida extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Izq, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Der, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -243,6 +249,10 @@ public class JuegoVida extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    private void celulasAleatoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_celulasAleatoriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_celulasAleatoriasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -284,8 +294,8 @@ public class JuegoVida extends javax.swing.JFrame {
     private javax.swing.JPanel Top;
     private javax.swing.JButton btnSalir;
     private javax.swing.JButton btnValidar;
+    private javax.swing.JButton celulasAleatorias;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField labelNumCel;
-    private javax.swing.JLabel labelSalida;
     // End of variables declaration//GEN-END:variables
 }
