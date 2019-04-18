@@ -5,6 +5,8 @@
  */
 package daw.AdrianPerezGomez;
 
+import java.util.Random;
+
 /**
  *
  * @author adrian
@@ -48,5 +50,21 @@ public class Generacion {
         this.matriz = matriz;
     }
     
-    
+  public static int generacionEstado(){
+        Random aleatorio = new Random();
+        int numeroestado= aleatorio.nextInt(1-0+1)+0;
+        return numeroestado;
+    }
+  
+    public static Celula[][] generacionCelulasAleatorias(int tamanio) {
+        Celula[][] tmp = new Celula[tamanio][tamanio];
+        for (int i = 0; i < tamanio; i++) {
+            for (int j = 0; j < tamanio; j++) {
+                tmp[i][j] = Celula.generacionCelulas(generacionEstado());
+
+            }
+        }
+
+        return tmp;
+    }
 }
