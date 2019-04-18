@@ -13,12 +13,17 @@ import javax.swing.JButton;
  * @author adrian
  */
 public class Celula extends JButton {
+    
     private boolean estado;
     
     public Celula(){
         super();
         this.estado = false;
         this.setBackground(Color.black);
+    }
+
+    public Celula(boolean estado) {
+        this.estado= estado;
     }
 
     public boolean isEstado() {
@@ -34,6 +39,19 @@ public class Celula extends JButton {
     public void resucitar(){
         this.estado=true;
         this.setBackground(Color.white);
+    }
+    
+    
+    public static Celula generacionCelulas(int numeroCelulas) {
+        switch (numeroCelulas) {
+
+            case 1:
+                return new Celula(true);
+            case 2:
+                return new Celula(false);
+
+        }
+        return new Celula();
     }
     
 }
